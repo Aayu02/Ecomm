@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech2etc Ecommerce Tutorial</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav
+        style="  width: 100%; background:#E3E6F3;  height: 90px; position: sticky;  z-index: 999; position: sticky; top: 0; left: 0; ">
+        <div>
+            <a href=""><img style="margin: 20px; margin-left: 80px;" src="img/logo.png" alt=""></a>
+            <div class="main" style="margin-top: -40px;">
+                <ul class="list"
+                    style="display: flex; justify-content: right; list-style: none; gap: 40px; margin-right: 100px; ">
+                    <li><a style="text-decoration: underline;  font-weight: 600; color: rgb(7, 246, 167); " onclick="window.location.href='index.html';">Home</a></li>
+                    <li><a style="text-decoration: none; color: grey; font-weight: 600;" onclick="window.location.href='shop.html';">Shop</a></li>
+                    <li><a style="text-decoration: none; color: grey; font-weight: 600;" onclick="window.location.href='blog.html';">Blog</a></li>
+                    <li><a style="text-decoration: none; color: grey; font-weight: 600;"onclick="window.location.href='Contact.html';">Contact</a></li>
+                    <li><a style="text-decoration: none; color: grey; font-weight: 600; " onclick="window.location.href='about.html';">About</a></li>
+                    <li><a style="text-decoration: none; color: rgb(51, 0, 255); font-weight: 600;" onclick="window.location.href='cart.html';"><i
+                                class="fa fa-shopping-bag" aria-hidden="true"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero section">
+        
+        <div style=" width: 100%; height: 40vh; background-image: url('./img/banner/b1.jpg') ; background-repeat: no-repeat ; background-size: cover; ">
+          
+            <h1 style="font-size: 50px; color: white; text-align: center; font-weight: 600; letter-spacing: 2px; padding-top: 70px;">#stayhome <br></h1>
+            <p style="text-transform: capitalize; font-size: 20px; color: white; text-align: center;" >save more with coupen & up to 70% off!</p>
+            
+        </div>
+    </section>
+    <section>
+        <h2>Shopping Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Remove</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Row 1 -->
+                <tr>
+                    <td><button class="remove-btn">Remove</button></td>
+                    <td><img src="img/products/f1.jpg" alt="Product 1" width="50"></td>
+                    <td>Product 1</td>
+                    <td>$19.99</td>
+                    <td>1</td>
+                    <td>$19.99</td>
+                </tr>
+                <!-- Example Row 2 -->
+                <tr>
+                    <td><button class="remove-btn">Remove</button></td>
+                    <td><img src="img/products/f2.jpg" alt="Product 2" width="50"></td>
+                    <td>Product 2</td>
+                    <td>$29.99</td>
+                    <td>2</td>
+                    <td>$59.98</td>
+                </tr>
+                <tr>
+                    <td><button class="remove-btn">Remove</button></td>
+                    <td><img src="img/products/f3.jpg" alt="Product 2" width="50"></td>
+                    <td>Product 2</td>
+                    <td>$29.99</td>
+                    <td>2</td>
+                    <td>$59.98</td>
+                </tr>
+                <tr>
+                    <td><button class="remove-btn">Remove</button></td>
+                    <td><img src="img/products/f4.jpg" alt="Product 2" width="50"></td>
+                    <td>Product 2</td>
+                    <td>$29.99</td>
+                    <td>2</td>
+                    <td>$59.98</td>
+                </tr>
+                <tr>
+                    <td><button class="remove-btn">Remove</button></td>
+                    <td><img src="img/products/f5.jpg" alt="Product 2" width="50"></td>
+                    <td>Product 2</td>
+                    <td>$29.99</td>
+                    <td>2</td>
+                    <td>$59.98</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div id="cartModal" style="display:none;">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems">
+          <!-- Cart items will be displayed here -->
+        </ul>
+        <button onclick="checkout()">Checkout</button>
+      </div>
+      
+    
+
+
+   
+
+    <section class="news letter" style="margin-top: 100px;">
+        <div style="border: 1px solid black; background-image: url(img/banner/b14.png); background-color:#041e42; padding: 20px;">
+            <h2 style="color: #E3E6F3; font-weight: 600; font-size: 35px; text-transform: capitalize;">sign up for news letters</h2>
+            <p style="color: rgb(89, 163, 237); font-weight: 500;">Get e-mail updates about our latest shop and <span style="color: orange;">special offer</span></p>
+        
+        <form style="display: flex; justify-content: end; ">
+            <input type="email" placeholder="your e-mail address " style="width: 300px; height: 45px; margin-top: -55px; padding: 10px;  margin-right: 80px; ">
+            <button type="submit" style="width: 100px; height: 45px; margin-top: -55px; background-color: rgb(37, 213, 90); border: none; margin-left: -81px; ">Sign up</button>
+        </form>
+    </div>
+    </section>
+
+    <footer style="margin-top: 100px;">
+        <section>
+            <div id="containerFooter">
+
+                <div id="webFooter">
+                    <h3> online store </h3>
+                    <p> men clothing </p>
+                    <p> women clothing </p>
+                    <p> men accessories </p>
+                    <p> women accessories </p>
+                </div>
+                <div id="webFooter">
+                    <h3> helpful link </h3>
+                    <p> home </p>
+                    <p> about </p>
+                    <p> contact </p>
+                </div>
+                <div id="webFooter">
+                    <h3> partners </h3>
+                    <p> zara </p>
+                    <p> pantaloons </p>
+                    <p> levis </p>
+                    <p> ucb </p>
+                    <p> + many more </p>
+                </div>
+                <div id="webFooter">
+                    <h3> address </h3>
+                    <p> building 17 </p>
+                    <p> sagar avenue </p>
+                    <p> pin- 462022 </p>
+                    <p> bhopal </p>
+                </div>
+            </div>
+            <div id="credit"> © Ayush mandve </a>
+                &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="" target="_blank"> Bhopal</a></div>
+        </section>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
